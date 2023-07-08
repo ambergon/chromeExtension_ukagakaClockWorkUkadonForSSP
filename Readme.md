@@ -11,7 +11,7 @@
 ## 導入
 ### DownLoad
 下記からzipをダウンロードして適当なフォルダに解凍します。<br>
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+[Releases · ambergon/chromeExtension_ukagakaClockWorkUkadonForSSP · GitHub](https://github.com/ambergon/chromeExtension_ukagakaClockWorkUkadonForSSP/releases)
 
 
 ### 読み込み
