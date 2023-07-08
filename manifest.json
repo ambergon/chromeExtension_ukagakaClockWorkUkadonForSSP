@@ -1,0 +1,25 @@
+{
+    "name": "ゼンマイ仕掛けのうかどん",
+    "description": "ukadon SSTP",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "content_scripts": [{
+        "matches": [ "https://ukadon.shillest.net/*" ],
+        "js": [ "front.js" ]
+    }],
+    "background": {
+        "service_worker": "back.js"
+    },
+    "host_permissions": [
+        "http://192.168.128.33/*"
+    ]
+}
+
+
+
+
+

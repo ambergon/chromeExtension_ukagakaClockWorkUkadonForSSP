@@ -1,0 +1,13 @@
+{ 
+    "LoadSection"   : { 
+        "ローカルタイムライン"          : 1 ,
+        "ホーム"                        : 1 ,
+        "技術寄り"                      : 0 
+    }, 
+    "TootOffSet"                   : 20      ,
+    "UpdateTime"                   : 60000   ,
+    "Interval"                     : 26000   ,
+    "beforeText"                   : "\\0\\b[2]\\_q"      ,
+    "afterText"                    : "\\_q"               ,
+    "IfGhost"                      : "Emily"
+} 
