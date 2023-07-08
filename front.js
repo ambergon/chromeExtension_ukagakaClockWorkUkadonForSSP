@@ -256,7 +256,7 @@ function Start( ){
         NextStart = interval + UPDATETIME;
 
         //KillTime関数機構
-        var num     = Math.floor( UPDATETIME / INTERVAL ) - 1;
+        var num     = Math.floor( UPDATETIME / INTERVAL );
         var wait    = 0;
         for (let _i = 0 ; _i < num ; _i++ ){
             var SendJson = { 

@@ -91,7 +91,7 @@ conf.jsonを編集することで詳細を設定できます。
 
 - OnKillTimeClockWorkUkadon
     暇つぶし用関数。<br>
-    取得内容がなかった際に (UpdateTime / Interval) - 1 回発生する。<br>
+    取得内容がなかった際に (UpdateTime / Interval) 回発生する。<br>
     ログファイルの再生等に使用するとよい。<br>
     第一引数に送信者名"ゼンマイ仕掛けのうかどん"が渡される。<br>
 
