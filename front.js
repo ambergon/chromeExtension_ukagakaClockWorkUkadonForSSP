@@ -129,6 +129,8 @@ function ReplaceLine( SakuraScript ){
     //最後はspaceの可能性。
     SakuraScript = SakuraScript.replace( /http[s]?:\/\/[\w\./-_!%?#:+=!&]*?[\n][\w\./-_!%?#:+=!&]*?[\n ]/g , "リンク" );
 
+    //文末の+を削除
+    SakuraScript = SakuraScript.replace( /\+$/g , "" );
     //文末の返答数を削除
     SakuraScript = SakuraScript.replace( /\n[0-9]+$/g , "" );
 
