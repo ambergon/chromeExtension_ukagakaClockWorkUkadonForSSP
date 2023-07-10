@@ -134,9 +134,6 @@ function ReplaceLine( SakuraScript ){
     //文末の返答数を削除
     SakuraScript = SakuraScript.replace( /\n[0-9]+$/g , "" );
 
-    //改行
-    SakuraScript = SakuraScript.replace( /\n+/g , "\\n" );
-    
     //文末の 翻訳を削除
     SakuraScript = SakuraScript.replace( /\\n翻訳/g , "" );
 
@@ -151,11 +148,18 @@ function ReplaceLine( SakuraScript ){
     SakuraScript = SakuraScript.replaceAll( "{" , "「" );
     SakuraScript = SakuraScript.replaceAll( "}" , "」" );
     SakuraScript = SakuraScript.replaceAll( "|" , "" );
+    SakuraScript = SakuraScript.replaceAll( "%" , "パーセント" );
 
     //整形;
     SakuraScript = SakuraScript.replaceAll( "？" , "?" );
     SakuraScript = SakuraScript.replaceAll( "！" , "!" );
     SakuraScript = SakuraScript.replaceAll( "　" , " " );
+
+
+    ////サクラスクリプトの置換を試みる。
+    SakuraScript = SakuraScript.replaceAll( "\\" , "¥" );
+    //改行
+    SakuraScript = SakuraScript.replace( /\n+/g , "\\n" );
 
     //英文対応
     //SakuraScript = SakuraScript.replaceAll( "," , ",\\n" );
