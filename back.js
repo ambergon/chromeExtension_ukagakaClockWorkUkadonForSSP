@@ -35,6 +35,9 @@ function SendSSTP( SakuraScript , beforeText , afterText , Ghost ) {
         }
         //文頭の改行を処分する。
         SakuraScript = SakuraScript.replace( /^\\n*/ , "" );
+
+        urlText = "\\_a[OnClockWorkUkadonOpenLink," + "https://ukadon.shillest.net" + "/UserSetPoint/" + xxxxID + "]〇\\_a";
+
     }
 
     console.log( "do" );
