@@ -89,6 +89,7 @@ conf.jsonを編集することで詳細を設定できます。
     SSTPで飛ぶ投稿内容を関数で拾うことができます。<br>
     第一引数:送信者名<br>
     第二引数:送信テキスト<br>
+    第三引数:TootID<br>
 
 - OnKillTimeClockWorkUkadon
     暇つぶし用関数。<br>
@@ -122,6 +123,11 @@ manifest.jsonのmatchesを書き換えることで使えると思いますが、
         "js": [ "front.js" ]
     }],
 ```
+
+
+## version up
+OnRecieveClockWorkUkadonに第三引数を追加。
+読み上げたTootのIDを受け取れるように変更。
 
 
 ## 他

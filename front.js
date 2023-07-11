@@ -120,6 +120,9 @@ function ReplaceLine( SakuraScript ){
     let xxxxID = y[0].replace( "TootID:" , "" );
     //console.log( xxxxID );
     SakuraScript = SakuraScript.replace( /TootID:.*?$/ , "" );
+
+    //これ、相手が別鯖の時はまずいかもしんないね。
+    //どっかでログを見よう。
     urlText = "\\_a[OnClockWorkUkadonOpenLink," + "https://ukadon.shillest.net" + "/UserSetPoint/" + xxxxID + "]〇\\_a";
 
     //改行より先に処理する必要がある。

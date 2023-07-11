@@ -7,10 +7,15 @@ var TABID ;
 
 function SendSSTP( SakuraScript , beforeText , afterText , Ghost ) { 
     var Sender = "";
+    var TootId = "";
     if( SakuraScript == "" ){
         Sender = "ゼンマイ仕掛けのうかどん";
         SakuraScript = "ジジッ..ジジッ..ジジッ....";
     } else {
+
+        TootId  = SakuraScript.replace( /^.*\\_a\[OnClockWorkUkadonOpenLink,.*UserSetPoint./ , "" );
+        TootId  = TootId.replace( /\]〇\\_a$/ , "" );
+        //console.log( TootId );
 
         //check boost
         let CheckBoostStr = SakuraScript.split( "\\n" );
@@ -36,8 +41,6 @@ function SendSSTP( SakuraScript , beforeText , afterText , Ghost ) {
         //文頭の改行を処分する。
         SakuraScript = SakuraScript.replace( /^\\n*/ , "" );
 
-        urlText = "\\_a[OnClockWorkUkadonOpenLink," + "https://ukadon.shillest.net" + "/UserSetPoint/" + xxxxID + "]〇\\_a";
-
     }
 
     console.log( "do" );
@@ -55,6 +58,7 @@ function SendSSTP( SakuraScript , beforeText , afterText , Ghost ) {
     sstpText = sstpText + "Event       : OnRecieveClockWorkUkadon"    + "\r\n"; 
     sstpText = sstpText + "Reference0  : " + Sender                   + "\r\n"; 
     sstpText = sstpText + "Reference1  : " + SakuraScript             + "\r\n"; 
+    sstpText = sstpText + "Reference2  : " + TootId                   + "\r\n"; 
     sstpText = sstpText + "Script      : " + SakuraScript             + "\r\n"; 
     sstpText = sstpText + "\r\n"; 
 
