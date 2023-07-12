@@ -123,7 +123,7 @@ function ReplaceLine( SakuraScript ){
 
     //これ、相手が別鯖の時はまずいかもしんないね。
     //どっかでログを見よう。
-    urlText = "\\_a[OnClockWorkUkadonOpenLink," + "https://ukadon.shillest.net" + "/UserSetPoint/" + xxxxID + "]〇\\_a";
+    urlText = " \\_a[OnClockWorkUkadonOpenLink," + "https://ukadon.shillest.net" + "/UserSetPoint/" + xxxxID + "]〇\\_a";
 
     //改行より先に処理する必要がある。
     SakuraScript = SakuraScript.replaceAll( "https://\n" , "https://" );
