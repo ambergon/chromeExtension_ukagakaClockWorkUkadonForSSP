@@ -130,7 +130,7 @@ function ReplaceLine( SakuraScript ){
     SakuraScript = SakuraScript.replaceAll( "http://\n" , "http://" );
 
     //最後はspaceの可能性。
-    SakuraScript = SakuraScript.replace( /http[s]?:\/\/[\w\./-_!%?#:+=!&]*?[\n][\w\./-_!%?#:+=!&]*?[\n ]/g , "リンク" );
+    SakuraScript = SakuraScript.replace( /http[s]?:\/\/[0-9\w\./-_!%?#:+=!&]*?[\n][0-9\w\./-_!%?#:+=!&]*?[\n ]/g , "リンク\n" );
 
     //文末の+を削除
     SakuraScript = SakuraScript.replace( /\+$/g , "" );
@@ -138,7 +138,7 @@ function ReplaceLine( SakuraScript ){
     SakuraScript = SakuraScript.replace( /\n[0-9]+$/g , "" );
 
     //文末の 翻訳を削除
-    SakuraScript = SakuraScript.replace( /\\n翻訳/g , "" );
+    SakuraScript = SakuraScript.replace( /\n翻訳/g , "" );
 
     //もっと見る
     SakuraScript = SakuraScript.replace( "もっと見る" , "read more" );
