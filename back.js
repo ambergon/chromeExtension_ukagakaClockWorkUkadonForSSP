@@ -66,7 +66,16 @@ function SendSSTP( SakuraScript , beforeText , afterText , Ghost ) {
     var dataSSTP = {}
     dataSSTP[ "method" ]    = "POST";
     dataSSTP[ "body" ]      = sstpText;
-    fetch( url , dataSSTP );
+
+    //fetch( url , dataSSTP );
+    //エラーを出さないように修正。
+    fetch( url , dataSSTP)
+    .then( response => {
+        if(!response.ok) {
+        }
+    })
+    .catch( error => {
+    });
 } 
 
 
@@ -90,10 +99,17 @@ function KillTime( Ghost ) {
     var dataSSTP = {}
     dataSSTP[ "method" ]    = "POST";
     dataSSTP[ "body" ]      = sstpText;
-    var promise_SSTP = (resolve, reject) => { 
-        fetch( url , dataSSTP );
-    }
-    return new Promise(promise_SSTP); 
+
+    //var promise_SSTP = (resolve, reject) => { 
+    fetch( url , dataSSTP)
+    .then( response => {
+        if(!response.ok) {
+        }
+    })
+    .catch( error => {
+    });
+    //}
+    //return new Promise(promise_SSTP); 
 }
 
 
